@@ -1,0 +1,29 @@
+.container {
+  width: 80%;
+  margin: auto;
+}
+
+
+/*h1 {
+  color: purple;
+}*/
+
+
+h1 {
+    -webkit-transition: text-shadow 1s linear;
+    -moz-transition: text-shadow 1s linear;
+    -ms-transition: text-shadow 1s linear;
+    -o-transition: text-shadow 1s linear;
+    transition: text-shadow 1s linear;
+}
+h1:hover,
+h1.glow {
+    text-shadow: 0 0 10px purple;
+}
+
+
+.blog_box {
+   width: 590px; 
+   height: 590px; 
+   border: 1px solid #999999;
+}

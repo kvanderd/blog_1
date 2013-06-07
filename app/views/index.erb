@@ -1,0 +1,57 @@
+ <!DOCTYPE html>
+<html lang="en">
+<div class="container">
+<head>
+  <!-- 
+    normalize.css removes cross-browser differences in defaults, e.g.,
+    differences in how form elements appear between Firefox and IE
+    See: http://necolas.github.com/normalize.css/
+  -->
+  <link rel="stylesheet" href="normalize.css">
+
+  <!-- Put your challenge-specific CSS in here -->
+  <link rel="stylesheet" href="main.css">
+  <title>Katharine's Blog</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Guest Blog Contribute Form</h1>
+    </header>
+
+    <div class="form">
+
+      <form id="new_post" action="/posts" method="post">
+        <h4>Title:</h4> 
+        <input type="text" name="title" placeholder="make the title catchy" required>
+        <h4>Body Content:</h4>
+        <input type="text" name="body_content" placeholder="your blog post" required>
+        <h4>Tags:</h4>
+        <input type="text" name="tags" required>
+        <h4>Author:</h4>
+        <input type="author" name="author">
+        <br />
+        <br />
+        <input type="submit" value="Submit Blog">        
+      </form>
+    </div>
+
+    <div class="pagination">
+      <a href="page1.html" class="disabled">&lt;&lt; Previous</a>
+      <ol>
+        <li><a href="page1.html" class="active">1</a></li>
+        <li><a href="page2.html">2</a></li>
+        <li><a href="page3.html">3</a></li>
+        <li><a href="page4.html">4</a></li>
+        <li><a href="page5.html">5</a></li>
+      </ol>
+      <a href="page2.html">Next &gt;&gt;</a>
+    </div>
+
+    <div class="footer">
+      Copyright &copy; 2013 Awesome People, Inc.
+    </div>
+  </div>
+</body>
+</dvi>
+</html>
