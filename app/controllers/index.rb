@@ -7,18 +7,24 @@ end
 get '/posts' do 
   puts "I am in get"
   @all_posts = Post.all
-  erb :index
+  erb :show_all
 end
 
 
-post "/posts" do
-    puts "I am in get"
+post '/posts' do
+  puts "I am in post"
   @new_post = Post.create(:title => params[:title], 
                           :body_content => params[:body_content], 
-                          :tags => params[:tags],
                            :author => params[:author])
-  @new_post
-  redirect '/posts'
+  redirect '/posts' 
+end
+
+get '/posts/:id' do
+   @post = Post.find(params[:id])
+   #find method defualts to finding by id. If you want to find by
+   #email, find_by_email
+
+erb :show_post
 end
 
 

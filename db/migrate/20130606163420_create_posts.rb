@@ -3,8 +3,8 @@ class CreatePosts < ActiveRecord::Migration
     create_table :posts do |t|
       t.string :title
       t.text   :body_content
-      t.string :tags
       t.string :author
+
     end
   end
 end
