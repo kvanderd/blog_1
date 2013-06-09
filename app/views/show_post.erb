@@ -2,6 +2,8 @@
   <h3><%= @post.title %></h3>
   <p><%= @post.body_content %></p>
   <p><%= @post.author %></p>
+   <p><%= @post.subjects %></p>
+
 
   </br>
 <a href="/posts/<%= @post.id %>/edit">Edit</a>
@@ -12,7 +14,7 @@
 
 
 
-<!-- <center>
+<center>
  <form id="new_subject" action="/new_subject" method="post">
    <h4>Subjects:</h4> 
    <input type="text" name="subject" placeholder="tag this post" required>
@@ -21,7 +23,7 @@
 </center>
 
 </div>
- -->
+
 
 
 
