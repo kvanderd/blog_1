@@ -5,14 +5,12 @@ end
 
 
 get '/posts' do 
-  puts "I am in get"
   @all_posts = Post.all
   erb :show_all
 end
 
 
 post '/posts' do
-  puts "I am in post"
   @new_post = Post.create(:title => params[:title], 
                           :body_content => params[:body_content], 
                            :author => params[:author])
@@ -27,5 +25,24 @@ get '/posts/:id' do
 erb :show_post
 end
 
+get '/posts/:id/edit' do
+  @post = Post.find(params[:id])
+  erb :edit_post
+end
+
+post '/posts/update' do
+  @post = Post.find(params[:id])
+  @post.update_attributes({title: params[:title], 
+                          body_content: params[:body_content]})
+  redirect "posts/#{@post.id}"
+end
+
+
+get '/posts/:id/delete' do
+  puts "I am here"
+  Post.find(params[:id]).destroy
+  
+  redirect '/'
+end
 
 
